@@ -8,19 +8,7 @@ export const CalendarBoard = () => {
   const today = new Date();
   const [year, month] = [today.getFullYear(), today.getMonth()]
 
-  const calendarBoard = useMemo(() => {
-    return Array(35)
-      .fill(0)
-      .map((_, i) => {
-        const firstDate = new Date(year, month, 1);
-        const firstDayIndex = firstDate.getDay();
-        const currDay = i - firstDayIndex;
-
-        firstDate.setDate(firstDate.getDate() + currDay);
-        const boardDate = firstDate.getDate();
-        return boardDate;
-      });
-  }, [year, month]);
+  const calendarBoard // カレンダーの作成
 
   const [events, setEvents] = useState([
     {
@@ -47,35 +35,12 @@ export const CalendarBoard = () => {
     date: 0,
     location: ""
   });
+  
+  function getEventsByDate(date) {}
 
-  // 第二引数にeventsを格納しないと，初期状態のstate(events)を参照してしまう
-  const getEventsByDate = useCallback((date) => {
-    return events.filter((e) => {
-      return date === Number(e.date)
-    });
-  }, [events])
+  function addEvent() {} // e.preventDefault()
 
-  const addEvent = useCallback((e) => {
-    e.preventDefault();
-
-    setEvents(prevEvents => [...prevEvents, inputEvent]);
-    setInputEvent({
-      title: "",
-      date: 0,
-      location: ""
-    })
-  }, [inputEvent])
-
-  const handleInputEvent = useCallback((e) => {
-    const {name, value} = e.target
-
-    setInputEvent(prevInput => (
-      {
-        ...prevInput,
-        [name]: value
-      }
-    ))
-  }, []);
+  function handleInputEvent(event) {}
 
   return (
       <div className='container'>
