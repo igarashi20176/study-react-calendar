@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.event-input {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.elements-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
