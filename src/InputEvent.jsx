@@ -7,17 +7,17 @@ export const InputEvent = (props) => {
       <h3>inputBox</h3>
       <div>
         <label className="input-box">title
-          <input onChange={props.handleInputEvent} type="text" name="title" value={props.inputEvent.title} placeholder="title..." />
+          <input onChange={} type="text" name="title" value={} placeholder="title..." />
         </label>
       </div>
       <div>
         <label className="input-box">date
-          <input onChange={props.handleInputEvent} type="number" name="date" value={props.inputEvent.date} placeholder="date..." />
+          <input onChange={} type="number" name="date" value={} placeholder="date..." />
         </label>
       </div>
       <div>
         <label className="input-box">location
-          <input onChange={props.handleInputEvent} type="text" name="location" value={props.inputEvent.location} placeholder="location..." />
+          <input onChange={} type="text" name="location" value={} placeholder="location..." />
         </label>
       </div>
 
