@@ -48,9 +48,7 @@ export const CalendarBoard = () => {
           <InputEvent addEvent={addEvent} handleInputEvent={handleInputEvent} inputEvent={inputEvent} />
         </div>
         <div className='elements-grid'>
-          {calendarBoard.map((date, idx) => {
-            return <CalendarElement key={idx} date={date} events={getEventsByDate(date)} />;
-          })}
+          element_grid
         </div>
       </div>
   );
