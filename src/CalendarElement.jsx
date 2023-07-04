@@ -5,12 +5,10 @@ export const CalendarElement = (props) => {
   return (
     <div className='container'>
       <h4 className='element-title'>
-        {props.date}
+        title
       </h4>
       <ul className='element-events'>
-        {props.events.map((e, idx) => {
-          return <li key={idx}>{e.title}</li>;
-        })}
+        <li>events</li>
       </ul>
     </div>
   );
