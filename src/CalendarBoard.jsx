@@ -45,7 +45,7 @@ export const CalendarBoard = () => {
   return (
       <div className='container'>
         <div className='event-input'>
-          <InputEvent addEvent={addEvent} handleInputEvent={handleInputEvent} inputEvent={inputEvent} />
+          inputEvent
         </div>
         <div className='elements-grid'>
           element_grid
